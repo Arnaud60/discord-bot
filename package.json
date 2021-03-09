@@ -2,9 +2,6 @@
   "name": "cc",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Arno",
   "license": "ISC",
   "dependencies": {
@@ -14,6 +11,9 @@
     "ffmpeg-static": "^4.2.7",
     "fs": "0.0.1-security",
     "ytdl-core": "^4.0.3"
+  },
+  "scripts": {
+    "start": "node index.js"
   },
   "devDependencies": {},
   "description": ""

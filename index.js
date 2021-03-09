@@ -12,30 +12,6 @@ bot.on('ready', () => {
 });
 
 bot.on('message', message => {
-
-  if (message.content === '%get') {
-    let role = message.guild.roles.cache.find("FASTDOG");
-
-// Let's pretend you mentioned the user you want to add a role to (!addrole @user Role Name):
-  let member = message.member
-
-// or the person who made the command: let member = message.member;
-
-// Add the role!
-  member.roles.add(role).catch(console.error);
-
-    
-  }
-  if (message.content === '%r') {
-    let role = message.guild.roles.cache.find(r => r.name === "REAL FAST DOG ++");
-
-    let member = new member(message.content.slice(2))
-    
-    member.roles.remove(role)
-    
-  }
-
-
   if (message.content === '%fred') {
     lien = "https://cdn.radiofrance.fr/s3/cruiser-production/2020/03/d801357e-2463-47d5-89ea-fa6671003a36/1200x680_dpaphotosthree556489.jpg"
     const attachment = new Discord.MessageAttachment(lien)
@@ -67,4 +43,4 @@ bot.on('message', async message => {
     }
   });
 
-bot.login(config.token);
+bot.login(process.env.TOKEN);
