@@ -4,6 +4,7 @@ const { strike } = require('ffmpeg-static');
 
 const bot = new Discord.Client()
 
+var isSpamming = true;
 
 
 
@@ -27,6 +28,19 @@ bot.on('message', message => {
     message.channel.send("Je suis la mère de Damien tu veux une petite gaterie ;)\nMes prix :\n10€ La branlette\n20€ La totale\n50€ La totale 30min\n100€ La totale une heure")
     message.channel.send(attachment)
   }
+
+  if(message.content === '%spam'){
+    while (isSpamming){
+      message.channel.send("OPEN")
+      message.send('OPEN')
+    }
+  }
+  
+
+  if(message.content === '%stop'){
+    isSpamming = false
+  }
+  
 
 });
 
