@@ -32,7 +32,6 @@ bot.on('message', message => {
   if(message.content === '%spam'){
     while (isSpamming){
       message.channel.send("OPEN")
-      message.send('OPEN')
     }
   }
   
